@@ -1,5 +1,8 @@
 # motion-prediction-tim
 
+This repo contains the code for the ACCV 2020 paper [Motion Prediction using Temporal Inception Module](https://arxiv.org/abs/2010.03006). 
+We only support the H3.6M dataset for now and support for the CMU dataset will come later.
+Implementation is done in [PyTorch](https://pytorch.org/).
 ### Download data
 
 The human3.6m dataset is in exponential map format.
@@ -41,16 +44,29 @@ Long term visualisation of our method compared to previous SOTA Mao et al. (2019
 
 ![Alt Text](gif/visualisation.gif)
 
+### Pretrained models
+Two pretrained models (long term and short term) are to be found in [checkpoint/pretrained](checkpoint/pretrained) and can be loaded with
+
+```python
+from utils.opt import Options
+import utils.model as nnmodel
+import torch
+
+opt = Options().parse()
+model = nnmodel.InceptionGCN(opt.linear_size, opt.dropout, num_stage=opt.num_stage, node_n=66, opt=opt)
+model.load_state_dict(torch.load('checkpoint/pretrained/name.pth.tar', map_location=torch.device('cpu'))['state_dict'])
+```
+
 ### Citing
 
 If you use our code, please cite our work
 
 ```
-@inproceedings{,
-  title={},
-  author={},
-  booktitle={ACCV},
-  year={2020}
+@misc{2010.03006,
+Author = {Tim Lebailly and Sena Kiciroglu and Mathieu Salzmann and Pascal Fua and Wei Wang},
+Title = {Motion Prediction Using Temporal Inception Module},
+Year = {2020},
+Eprint = {arXiv:2010.03006},
 }
 ```
 

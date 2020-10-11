@@ -156,7 +156,7 @@ class Conv1Channel(nn.Module):
         return x
 
 
-class TimeInceptionModule(nn.Module):
+class TemporalInceptionModule(nn.Module):
     def __init__(self):
         super().__init__()
         self.observed_length = [5, 5, 10, 10, 10]
@@ -197,10 +197,10 @@ class InceptionGCN(nn.Module):
         """
         super().__init__()
         self.opt = opt
-        self.time_inception_mod = TimeInceptionModule()
+        self.temporal_inception_mod = TemporalInceptionModule()
 
         # Overwrite input parameter with correct size with depends on the TIM
-        hidden_feature = self.time_inception_mod.output_size
+        hidden_feature = self.temporal_inception_mod.output_size
 
         self.num_stage = num_stage
         self.bn1 = nn.BatchNorm1d(node_n * hidden_feature)
@@ -217,7 +217,7 @@ class InceptionGCN(nn.Module):
 
     def forward(self, x):
         x = x[:, :, :self.opt.input_n]
-        y = self.time_inception_mod(x)
+        y = self.temporal_inception_mod(x)
         b, n, f = y.shape
         y = self.bn1(y.view(b, -1)).view(b, n, f)
         y = self.act_f(y)

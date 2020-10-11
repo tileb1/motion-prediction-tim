@@ -37,7 +37,7 @@ class Options:
         self.parser.add_argument('--lr_gamma', type=float, default=0.96)
         self.parser.add_argument('--input_n', type=int, default=10, help='observed seq length')
 
-        self.parser.add_argument('--output_n', type=int, default=25, help='future seq length')
+        self.parser.add_argument('--output_n', type=int, default=10, help='future seq length')
         self.parser.add_argument('--actions', type=str, default='all', help='path to save checkpoint')
         self.parser.add_argument('--epochs', type=int, default=50)
         self.parser.add_argument('--dropout', type=float, default=0.5,
@@ -47,8 +47,6 @@ class Options:
         self.parser.add_argument('--job', type=int, default=10, help='subprocesses to use for data loading')
         self.parser.add_argument('--is_load', dest='is_load', action='store_true', help='wether to load existing model')
         self.parser.add_argument('--sample_rate', type=int, default=2, help='frame sampling rate')
-        self.parser.add_argument('--is_norm', dest='is_norm', action='store_true', help='whether to normalize the angles/3d coordinates')
-
         self.parser.add_argument('--filename_ext', type=str, default='')
 
         self.parser.set_defaults(max_norm=True)

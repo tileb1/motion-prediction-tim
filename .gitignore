@@ -3,3 +3,5 @@
 h3.6m/
 
 *.pyc
+
+.ipynb_checkpoints/
