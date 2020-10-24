@@ -61,7 +61,7 @@ You can also run a demo of the prediction vs groundtruth by calling
 ```python
 python demo.py
 ```
-This visualisation code 
+
 ### Citing
 
 If you use our code, please cite our work
