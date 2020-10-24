@@ -1,3 +1,4 @@
-numpy=1.19.1
-pandas=1.1.1
-progress=1.5
+matplotlib>=3.3.1
+numpy>=1.19.1
+pandas>=1.1.1
+progress>=1.5

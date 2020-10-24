@@ -199,7 +199,7 @@ class InceptionGCN(nn.Module):
         self.opt = opt
         self.temporal_inception_mod = TemporalInceptionModule()
 
-        # Overwrite input parameter with correct size with depends on the TIM
+        # Overwrite input parameter with correct size which depends on the TIM
         hidden_feature = self.temporal_inception_mod.output_size
 
         self.num_stage = num_stage

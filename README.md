@@ -57,6 +57,11 @@ model = nnmodel.InceptionGCN(opt.linear_size, opt.dropout, num_stage=opt.num_sta
 model.load_state_dict(torch.load('checkpoint/pretrained/name.pth.tar', map_location=torch.device('cpu'))['state_dict'])
 ```
 
+You can also run a demo of the prediction vs groundtruth by calling 
+```python
+python demo.py
+```
+This visualisation code 
 ### Citing
 
 If you use our code, please cite our work
@@ -72,4 +77,4 @@ Eprint = {arXiv:2010.03006},
 
 ### Acknowledgments
 
-This code builds on top of [LearnTrajDep](https://github.com/wei-mao-2019/LearnTrajDep) by Mao et al. (2019).
+This code builds on top of [LearnTrajDep](https://github.com/wei-mao-2019/LearnTrajDep) by Mao et al. (2019) which is itself adapted from [3d-pose-baseline](https://github.com/una-dinosauria/3d-pose-baseline). The visualization code is adapted from [Residual Sup. RNN](https://github.com/una-dinosauria/human-motion-prediction).
