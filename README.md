@@ -22,7 +22,7 @@ cd ..
 * ```pip install -r requirements.txt```
 
 ### Train the model
-Run the [main_3d.py](main_3d.py) file. Command line args are defined in [opt.py](utils/opt.py).
+Run the [main_3d.py](main_3d.py) file. Command line args are defined in [opt.py](utils/opt.py). The default configuration is for short-term prediction.
 ```bash
 python main_3d.py
 ```
