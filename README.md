@@ -67,11 +67,12 @@ python demo.py
 If you use our code, please cite our work
 
 ```
-@misc{2010.03006,
-Author = {Tim Lebailly and Sena Kiciroglu and Mathieu Salzmann and Pascal Fua and Wei Wang},
-Title = {Motion Prediction Using Temporal Inception Module},
-Year = {2020},
-Eprint = {arXiv:2010.03006},
+@InProceedings{Lebailly_2020_ACCV,
+    author    = {Lebailly, Tim and Kiciroglu, Sena and Salzmann, Mathieu and Fua, Pascal and Wang, Wei},
+    title     = {Motion Prediction Using Temporal Inception Module},
+    booktitle = {Proceedings of the Asian Conference on Computer Vision (ACCV)},
+    month     = {November},
+    year      = {2020}
 }
 ```
 
