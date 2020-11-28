@@ -1,6 +1,6 @@
 # motion-prediction-tim
 
-This repo contains the code for the ACCV 2020 paper [Motion Prediction using Temporal Inception Module](https://arxiv.org/abs/2010.03006). 
+This repo contains the code for the ACCV 2020 paper [Motion Prediction using Temporal Inception Module](https://openaccess.thecvf.com/content/ACCV2020/papers/Lebailly_Motion_Prediction_Using_Temporal_Inception_Module_ACCV_2020_paper.pdf). 
 We only support the H3.6M dataset for now and support for the CMU dataset will come later.
 Implementation is done in [PyTorch](https://pytorch.org/).
 ### Download data
